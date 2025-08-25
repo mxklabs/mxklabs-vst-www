@@ -53,3 +53,10 @@ body {
 .mxklabs-logo-page {
   color: #ff8000;
 }
+
+@theme {
+  --color-mxk-cyan: #00b8b8; 
+  --color-mxk-red: #ff5555; 
+  --color-mxk-gray: #a1a1a1; 
+  --color-mxk-orange: #ff8000; 
+}
