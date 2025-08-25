@@ -5,7 +5,7 @@ export default function Home() {
     <div className="h-screen overflow-y-scroll bg-gray-100">
       <div className="max-w-4xl mx-auto py-16 px-4 space-y-8">
         {/* Card 1: rounded-lg rounded-t-lg shadow-sm */}
-          <div className="max-w-sm bg-yellow-100 border border-gray-200   dark:bg-gray-800 dark:border-gray-700">
+          <div className="max-w-l bg-yellow-100 border border-gray-200   dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <img className="" src="/piano1.png" alt="" />
             </a>
@@ -19,7 +19,7 @@ export default function Home() {
                 </a>
             </div>
           </div>
-          <div className="max-w-sm bg-yellow-100 border border-gray-200   dark:bg-gray-800 dark:border-gray-700">
+          <div className="max-w-xs bg-yellow-100 border border-gray-200   dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <img className="" src="/guitar1.png" alt="" />
             </a>
