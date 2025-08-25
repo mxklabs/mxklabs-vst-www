@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +26,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.mxklabs-logo {
+  font-family: Comfortaa;
+  letter-spacing: 0.1rem;
+}
+
+.mxklabs-logo-mxk {
+  color: #00b8b8;
+}
+
+.mxklabs-logo-labs {
+  color: #ff5555;
+}
+
+.mxklabs-logo-normal {
+  color: #a1a1a1;
+}
+
+.mxklabs-logo-slash {
+  color: #a1a1a1;
+}
+
+.mxklabs-logo-page {
+  color: #ff8000;
 }
