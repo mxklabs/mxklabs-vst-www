@@ -9,7 +9,7 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ title, description, imageUrl, price, cardSize, bgColor}) => {
   return (
 
-    <div className={`"bg-yellow-100 border border-gray-200 dark:bg-gray-800 dark:border-gray-700" ${cardSize} ${bgColor}`} >
+    <div className={`"" ${cardSize} ${bgColor}`} >
       <a href="#">
           <img className="" src={imageUrl} alt={title} />
       </a>

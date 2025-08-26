@@ -31,10 +31,10 @@ const Navbar = () => {
     src="logo.svg"
     className="h-8 w-auto"
   />
-  <span className="mxklabs-logo text-lg font-roboto font-bold text-gray-800">
+  <span className="mxklabs-wide-logo text-lg font-roboto font-bold text-gray-800">
     <span className="mxklabs-logo-mxk">mxk</span>
     <span className="mxklabs-logo-labs">labs</span>
-    <span className="mxklabs-logo-normal">.co.uk</span>
+    {/* <span className="mxklabs-logo-normal">.co.uk</span> */}
     <span className="mxklabs-logo-slash">/</span>
     <span className="mxklabs-logo-page">vst</span>
   </span>

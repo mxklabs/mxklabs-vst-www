@@ -29,9 +29,13 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-.mxklabs-logo {
+.mxklabs-wide-logo {
   font-family: Comfortaa;
   letter-spacing: 0.1rem;
+}
+
+.mxklabs-logo {
+  font-family: Comfortaa;
 }
 
 .mxklabs-logo-mxk {
