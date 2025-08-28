@@ -6,7 +6,7 @@ import "./globals.css";
 import Navbar from "./navbar.tsx";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,18 +29,34 @@ export default function RootLayout({
     AOS.init({ once: true });
   }, []);
 
+  // State to control navbar visibility
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.7) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="bg-mxk-white h-screen ">
-        <header className="sticky top-0 z-50"><Navbar /></header>
-          {/* <div className="bg-white max-w-6xl mx-auto py-16 px-1 space-y-8"> */}
+          {/* Hide navbar initially, show after scrolling past hero */}
+          <header className={`sticky top-0 z-50 transition-opacity duration-500 ${showNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <Navbar />
+          </header>
           <div className="border-1 border-white">
             {children}
-            </div>
-          {/* </div> */}
+          </div>
         </div>
       </body>
     </html>
