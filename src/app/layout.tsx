@@ -1,7 +1,12 @@
+'use client'
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
+import Navbar from "./navbar.tsx";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,16 +18,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "mxklabs/vst",
-  description: "Virtual Instruments powered by AI/ML",
-};
+// Removed metadata export to comply with Next.js rules for client components
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
+
   return (
     <html lang="en">
       <body

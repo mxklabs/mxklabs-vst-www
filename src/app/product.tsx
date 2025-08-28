@@ -1,15 +1,17 @@
 import Image from "next/image";
 
-interface ProductProps {
+interface ProductProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
   imageUrl: string;
+  price: string;
+  cardSize: string;
+  bgColor: string;
 }
 
-const Product: React.FC<ProductProps> = ({ title, description, imageUrl, price, cardSize, bgColor}) => {
+const Product: React.FC<ProductProps> = ({ title, description, imageUrl, price, cardSize, bgColor, ...rest }) => {
   return (
-
-    <div className={`"" ${cardSize} ${bgColor}`} >
+    <div className={`"" ${cardSize} ${bgColor}`} {...rest}>
       <a href="#">
           <img className="" src={imageUrl} alt={title} />
       </a>
