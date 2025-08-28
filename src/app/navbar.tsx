@@ -12,7 +12,8 @@ const Navbar = () => {
 
     <Disclosure
       as="nav"
-      className="relative bg-gray-200/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+      className="relative bg-gray-200/90 after:pointer-events-none after:absolute
+                 after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
     >
       <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-12 items-center justify-between">
@@ -26,19 +27,19 @@ const Navbar = () => {
             </DisclosureButton>
           </div>
           <div className="flex shrink-0 items-center space-x-4">
-  <img
-    alt="mxklabs Logo"
-    src="logo.svg"
-    className="h-8 w-auto"
-  />
-  <span className="mxklabs-wide-logo text-lg font-roboto font-bold text-gray-800">
-    <span className="mxklabs-logo-mxk">mxk</span>
-    <span className="mxklabs-logo-labs">labs</span>
-    {/* <span className="mxklabs-logo-normal">.co.uk</span> */}
-    <span className="mxklabs-logo-slash">/</span>
-    <span className="mxklabs-logo-page">vst</span>
-  </span>
-</div>
+          <img
+            alt="mxklabs Logo"
+            src="logo.svg"
+            className="h-8 w-auto"
+          />
+          <span className="mxklabs-wide-logo text-lg font-roboto font-bold text-gray-800">
+            <span className="mxklabs-logo-mxk">mxk</span>
+            <span className="mxklabs-logo-labs">labs</span>
+            {/* <span className="mxklabs-logo-normal">.co.uk</span> */}
+            <span className="mxklabs-logo-slash">/</span>
+            <span className="mxklabs-logo-page">vst</span>
+          </span>
+        </div>
       </div>
     </div>
   </Disclosure>

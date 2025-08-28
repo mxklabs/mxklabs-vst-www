@@ -27,9 +27,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><header className="sticky top-0 z-50"><Navbar /></header>
-        
-        {children}
+      >
+        <div className="bg-mxk-white h-screen ">
+        <header className="sticky top-0 z-50"><Navbar /></header>
+          {/* <div className="bg-white max-w-6xl mx-auto py-16 px-1 space-y-8"> */}
+          <div className="border-1 border-white">
+            {children}
+            </div>
+          {/* </div> */}
+        </div>
       </body>
     </html>
   );
