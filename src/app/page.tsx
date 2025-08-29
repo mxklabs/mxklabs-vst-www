@@ -1,3 +1,4 @@
+'use client'
 import Product from "./product";
 import Mxklabs from "./mxklabs";
 
@@ -14,9 +15,21 @@ export default function Home() {
           </p>
         </div>
         <div className="relative z-10 flex-1 flex flex-col items-center md:items-end justify-center w-full md:w-auto mt-8 md:mt-0">
-          <a href="#products" className="px-10 py-4 bg-mxk-orange text-white rounded-xl shadow-xl text-xl font-semibold hover:bg-orange-500 transition">
-            Browse Products
-          </a>
+          <div className="flex flex-col items-center animate-bounce cursor-pointer" onClick={() => {
+            const el = document.getElementById('products');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}>
+            <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="text-mxk-orange mb-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="text-mxk-orange mb-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="text-mxk-orange mb-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <span className="text-mxk-orange text-lg font-medium">Scroll down to explore</span>
+          </div>
         </div>
       </section>
       <div id="products" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 mt-[-4rem] md:mt-[-6rem]">
