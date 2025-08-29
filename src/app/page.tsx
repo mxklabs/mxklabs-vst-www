@@ -1,12 +1,42 @@
 'use client'
 import Product from "./product";
 import Mxklabs from "./mxklabs";
+import Wave from 'react-wavify'
 
 export default function Home() {
   return (
     <>
       <section className="relative w-full flex flex-col md:flex-row items-center justify-between px-6 py-16 min-h-screen overflow-hidden bg-mxk-white">
         {/* Decorative waveform background */}
+        {/* <Wave fill='#f79902'
+              paused={false}
+              
+              className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none" style={{zIndex: 0}}
+              options={{
+                height: 420,
+                amplitude: 60,
+                speed: 1.15,
+                points: 1,
+                // fill: '#00ff00'
+              }}
+        /> */}
+        
+        <Wave fill="url(#gradient)" className="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none select-none" style={{zIndex: 0}}
+              options={{
+                height: 420,
+                amplitude: 30,
+                speed: 0.15,
+                points: 4,
+                // fill: '#00ff00'
+              }}>
+          <defs>
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+              <stop offset="10%"  stopColor="#ff5555ff" />
+              {/* <stop offset="50%" stopColor="#a1a1a100" /> */}
+              <stop offset="90%" stopColor="#ff5555ff" />
+            </linearGradient>
+          </defs>
+        </Wave>
         <img src="/file.svg" alt="Waveform background" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none" style={{zIndex: 0}} />
         <div className="relative z-10 flex-1 flex flex-col items-start justify-center text-left max-w-xl">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-gray-900 dark:text-white">AI/ML-Powered Virtual Instruments</h1>
